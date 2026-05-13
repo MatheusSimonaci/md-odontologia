@@ -103,7 +103,7 @@ Cada iteração começa removendo, não adicionando. O espaço em branco é o qu
 ## 6. Apresentação da Equipe (Filosofia Rolex/Apple)
 
 **Decisão de produto:** A equipe é apresentada exclusivamente no hero, como retrato coletivo editorial. 
-- `equipe.jpg` recebe overlay espresso à esquerda, vinheta sutil e CSS filter (saturate/contrast/sepia) para coerência cromática.
+- `equipe-clean.jpg` recebe overlay espresso à esquerda, vinheta sutil e CSS filter (saturate/contrast/sepia) para coerência cromática.
 - Não criar seções de perfis individuais ou avatares.
 
 ---

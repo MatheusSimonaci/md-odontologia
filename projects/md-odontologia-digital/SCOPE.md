@@ -69,7 +69,7 @@ Ver `DESIGN.md` para o sistema completo. Resumo:
 
 | Asset | Uso no site |
 |---|---|
-| `assets/equipe.jpg` | Hero — fundo editorial full-screen |
+| `assets/equipe-clean.jpg` | Hero — fundo editorial full-screen |
 | `assets/before-after-01` a `21.jpg` | Galeria de casos clínicos |
 | `assets/frame-atendimento-01` a `04.jpg` | Ambiente de atendimento |
 | `assets/frame-entrada-clinica-01` a `05.jpg` | Espaço físico (seção Localização) |
