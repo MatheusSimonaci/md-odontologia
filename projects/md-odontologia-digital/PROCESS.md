@@ -20,5 +20,6 @@ Este documento destila as estratégias validadas para replicação em projetos d
 *   [x] **Implementação Base (CEO)**: Nav, Hero, Especialidades, Localização.
 *   [x] **Completação do Escopo (CTO)**: Adição de Depoimentos, Casos Clínicos (Antes/Depois) e CTA Final. Refinamento de navegação.
 *   [ ] **Deploy em Produção**: Aguardando credenciais (Vercel Token ou GitHub PAT).
-*   [ ] **Integração de Vídeos**: Substituir imagens estáticas no Hero por `md-odontologia-clinic.mp4` em loop silencioso.
+*   [x] **Integração de Vídeos**: Substituir imagens estáticas no Hero por `md-odontologia-clinic.mp4` em loop silencioso.
+*   [x] **Refinamento Editorial**: Aplicação de filtros CSS (saturate/contrast/sepia) em todas as fotos para coesão visual.
 *   [ ] **Otimização de Assets**: Upload de imagens para Cloudinary/Vercel Blob para performance extrema.
