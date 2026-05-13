@@ -59,7 +59,6 @@ Ver `DESIGN.md` para o sistema completo. Resumo:
 
 - Fundo creme quente `#F5F0E8`, texto espresso `#2C1E12`
 - Teal `#0096A0` como acento digital (CTAs, destaques)
-- Cobre `#C9956C` como acento humano (depoimentos, detalhes)
 - Tipografia: Inter (corpo) + Playfair Display (headlines, marca "MD")
 - Filosofia: subtração como luxo — cada iteração começa removendo, não adicionando
 
@@ -69,10 +68,9 @@ Ver `DESIGN.md` para o sistema completo. Resumo:
 
 | Asset | Uso no site |
 |---|---|
-| `assets/equipe-clean.jpg` | Hero — fundo editorial full-screen |
+| `assets/equipe.jpg` | Hero — fundo editorial full-screen |
 | `assets/before-after-01` a `21.jpg` | Galeria de casos clínicos |
 | `assets/frame-atendimento-01` a `04.jpg` | Ambiente de atendimento |
 | `assets/frame-entrada-clinica-01` a `05.jpg` | Espaço físico (seção Localização) |
 | `assets/md-odontologia-logo.png` | Referência de identidade visual |
-| `assets/md-odontologia-clinic.mp4` | Vídeo da clínica (não integrado ainda) |
-| `assets/md-odontologia-preview.mp4` | Vídeo de preview (não integrado ainda) |
+| `assets/md-odontologia-clinic.mp4` | Hero — loop de vídeo silencioso |

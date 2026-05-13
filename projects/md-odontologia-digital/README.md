@@ -27,9 +27,10 @@ Se você é um agente de IA trabalhando neste projeto, siga estas prioridades:
 
 ### 3. Princípios de Design (Invioláveis)
 *   **Luxo por Subtração**: A autoridade vem do espaço em branco e da ausência de excesso. Antes de adicionar, tente remover.
-*   **Imagens Editorial**: O Hero usa fotos reais (`equipe-clean.jpg`) com tratamento editorial via CSS.
+*   **Imagens Editorial**: O Hero usa fotos reais (`equipe.jpg`) com tratamento editorial via CSS.
 *   **Proibido "Image Strips"**: Não interrompa seções de conteúdo com faixas de imagem full-width (ver §9.1 do `DESIGN.md`).
 *   **Grids Honestos**: Galeria de Antes/Depois é um CSS Grid direto (`.ba-container`), sem interações complexas ou sliders JS bugados.
+
 
 ---
 

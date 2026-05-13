@@ -103,7 +103,7 @@ Cada iteração começa removendo, não adicionando. O espaço em branco é o qu
 ## 6. Apresentação da Equipe (Filosofia Rolex/Apple)
 
 **Decisão de produto:** A equipe é apresentada exclusivamente no hero, como retrato coletivo editorial. 
-- `equipe-clean.jpg` recebe overlay espresso à esquerda, vinheta sutil e CSS filter (saturate/contrast/sepia) para coerência cromática.
+- `equipe.jpg` recebe overlay espresso à esquerda, vinheta sutil e CSS filter (saturate/contrast/sepia) para coerência cromática.
 - Não criar seções de perfis individuais ou avatares.
 
 ---
@@ -114,7 +114,7 @@ Cada iteração começa removendo, não adicionando. O espaço em branco é o qu
 2. **Teal restrito** — sinaliza "conversão digital", não é cor decorativa.
 3. **Espresso nos shadows** — usar `rgba(44,30,18,...)` para calor cromático.
 4. **Proibido Image Strips** — não fragmentar fluxo visual com faixas de fotos entre cards.
-5. **Zero Prova Social** — não incluir seções de depoimentos ou resultados antes/depois neste experimento. Foco total em autoridade de equipe e especialidade.
+5. **Prova Social unificada** — seções de depoimentos e resultados (Antes/Depois) devem seguir o grid sóbrio do projeto, sem sliders ou excesso de cores.
 
 ---
 
