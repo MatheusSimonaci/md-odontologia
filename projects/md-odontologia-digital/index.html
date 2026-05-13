@@ -140,8 +140,30 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             display: inline-block;
+            white-space: nowrap;
         }
         .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 150, 160, 0.2); }
+
+        .btn-location-header {
+            background-color: var(--warm-sand);
+            color: var(--deep-espresso);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid var(--warm-divider);
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(44, 30, 18, 0.08);
+            white-space: nowrap;
+        }
+        .btn-location-header:hover {
+            background-color: var(--warm-cream);
+            border-color: var(--deep-espresso);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(44, 30, 18, 0.12);
+        }
 
         .btn-secondary {
             background-color: transparent;
@@ -212,6 +234,22 @@
         @media (max-width: 768px) {
             .btn-floating-location { bottom: 24px; left: 24px; width: 48px; height: 48px; }
             .hero-actions { justify-content: center; }
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        @media (max-width: 480px) {
+            .nav-actions { gap: 6px; }
+            .nav-actions .btn-cta, 
+            .nav-actions .btn-location-header {
+                padding: 10px 14px;
+                font-size: 11px;
+            }
+            .logo { width: 40px; height: 40px; font-size: 20px; }
         }
 
         /* Hero Section */
@@ -435,7 +473,10 @@
                 <li><a href="#casos">Casos</a></li>
                 <li><a href="#localizacao">Onde Estamos</a></li>
             </ul>
-            <a href="https://wa.me/24999960640" class="btn-cta">Agendar</a>
+            <div class="nav-actions">
+                <a href="https://wa.me/24999960640" class="btn-cta">Agendar Consulta</a>
+                <a href="#localizacao" class="btn-location-header">Onde Fica</a>
+            </div>
         </div>
     </nav>
 
