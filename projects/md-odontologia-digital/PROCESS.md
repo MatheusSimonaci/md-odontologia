@@ -15,3 +15,10 @@ Este documento destila as estratégias validadas para replicação em projetos d
 *   **Mapeamento Humano (Manus IA)**: Use pesquisa profunda para identificar toda a equipe e especialidades antes de codar. O site vale o quanto a equipe transmite confiança.
 *   **Arquitetura Mobile-First**: O código base é para 375px. Layouts desktop são adições via media queries, nunca o contrário.
 *   **Performance Invisível**: Animações restritas a `transform` e `opacity`. Sem frameworks, sem dependências, apenas HTML/CSS puro de alta performance.
+
+## 4. Evolução e Próximos Passos
+*   [x] **Implementação Base (CEO)**: Nav, Hero, Especialidades, Localização.
+*   [x] **Completação do Escopo (CTO)**: Adição de Depoimentos, Casos Clínicos (Antes/Depois) e CTA Final. Refinamento de navegação.
+*   [ ] **Deploy em Produção**: Aguardando credenciais (Vercel Token ou GitHub PAT).
+*   [ ] **Integração de Vídeos**: Substituir imagens estáticas no Hero por `md-odontologia-clinic.mp4` em loop silencioso.
+*   [ ] **Otimização de Assets**: Upload de imagens para Cloudinary/Vercel Blob para performance extrema.

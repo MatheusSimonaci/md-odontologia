@@ -56,6 +56,29 @@ Se você é um agente de IA trabalhando neste projeto, siga estas prioridades:
 3.  **Edição**: Ao editar o `index.html`, garanta que as variáveis CSS e tokens de espaçamento do `DESIGN.md` sejam respeitados.
 4.  **Validação**: Sempre teste o layout no breakpoint de 375px (mobile) e 1200px (desktop).
 
+## 🎨 Como Customizar
+O projeto foi desenhado para ser facilmente customizável via variáveis CSS e tokens de design:
+
+- **Cores e Espaçamento**: Edite os valores no bloco `:root` do arquivo `index.html`.
+- **Textos e Informações**: Todos os dados factuais (CRO, endereço, horários) estão centralizados em `INFOS.md` e devem ser refletidos no `index.html`.
+- **Imagens**: Substitua os arquivos na pasta `assets/` mantendo os nomes de referência ou atualize os caminhos no HTML.
+
+## 🚀 Como Implantar (Deploy)
+O projeto está pronto para ser hospedado em plataformas de estáticos como Vercel ou Netlify.
+
+### Via Vercel (Recomendado)
+1. Conecte seu repositório GitHub ao Vercel.
+2. Selecione a pasta raiz do projeto.
+3. O `vercel.json` já está configurado para servir a pasta `projects/md-odontologia-digital`.
+4. Clique em **Deploy**.
+
+### Via Script Local
+Use o script `deploy.sh` na raiz para realizar o push para o GitHub:
+```bash
+./deploy.sh
+```
+*Nota: Requer configuração de SSH ou Token do GitHub.*
+
 ---
 
 ## 📋 Status Atual e Pendências
