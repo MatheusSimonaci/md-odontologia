@@ -1,19 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "projects/md-odontologia-digital/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/projects/md-odontologia-digital/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/projects/md-odontologia-digital/$1"
-    }
-  ]
+  "outputDirectory": "projects/md-odontologia-digital",
+  "framework": null
 }
