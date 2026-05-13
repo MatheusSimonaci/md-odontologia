@@ -264,6 +264,43 @@
         .gallery-item:hover img { transform: scale(1.05); }
         .gallery-item:nth-child(1) { grid-column: span 2; }
 
+        /* Testimonials */
+        .grid-testimonials {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        @media (min-width: 768px) {
+            .grid-testimonials { grid-template-columns: 1fr 1fr; }
+        }
+        .testimonial-card {
+            background-color: var(--warm-sand);
+            padding: var(--space-lg);
+            border-radius: 4px;
+        }
+        .testimonial-content { font-style: italic; font-size: 16px; margin-bottom: 24px; color: var(--deep-espresso); }
+        .testimonial-author { font-weight: 600; font-size: 14px; color: var(--warm-stone); text-transform: uppercase; letter-spacing: 0.1em; }
+
+        /* Before & After Cases */
+        .grid-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .case-card { overflow: hidden; border-radius: 4px; }
+        .case-card img { width: 100%; height: auto; transition: transform 0.6s ease; }
+        .case-card:hover img { transform: scale(1.03); }
+
+        /* Final CTA */
+        .cta-final {
+            background-color: var(--deep-espresso);
+            color: white;
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+        .cta-final h2 { font-size: 42px; margin-bottom: var(--space-md); }
+        .cta-final p { font-size: 18px; margin-bottom: var(--space-lg); color: rgba(255, 255, 255, 0.7); }
+
         /* Footer */
         footer {
             background-color: var(--warm-sand);
@@ -298,6 +335,8 @@
             <ul class="nav-links">
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#casos">Casos</a></li>
                 <li><a href="#localizacao">Onde Estamos</a></li>
             </ul>
             <a href="https://wa.me/24999960640" class="btn-cta">Agendar</a>
@@ -388,6 +427,51 @@
                     <div class="gallery-item"><img src="assets/frame-atendimento-01.jpg" alt="Sala de Atendimento"></div>
                     <div class="gallery-item"><img src="assets/frame-entrada-clinica-04.jpg" alt="Recepção"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="section">
+        <div class="container">
+            <div class="section-header reveal-item" data-reveal>
+                <p class="subtitle">O que dizem nossos pacientes</p>
+                <h2>Relatos de Confiança</h2>
+            </div>
+            
+            <div class="grid-testimonials" data-reveal>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Atendimento sensacional! Cheguei na clínica sentindo muita dor, e precisava fazer uma extração de emergência. Desde a recepcionista até o Dr. André foram incríveis. Me acalmaram e passaram segurança durante todo o tempo."</p>
+                    <p class="testimonial-author">Gomes</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Atendimento perfeito. Todos foram extremamente atenciosos e solícitos, nos sentimos acolhidos o tempo todo."</p>
+                    <p class="testimonial-author">Caio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="casos" class="section" style="background-color: var(--warm-sand);">
+        <div class="container">
+            <div class="section-header reveal-item" data-reveal>
+                <p class="subtitle">Resultados Clínicos</p>
+                <h2>Transformações</h2>
+            </div>
+            
+            <div class="grid-cases" data-reveal>
+                <div class="case-card"><img src="assets/before-after-01.jpg" alt="Caso Clínico 01"></div>
+                <div class="case-card"><img src="assets/before-after-02.jpg" alt="Caso Clínico 02"></div>
+                <div class="case-card"><img src="assets/before-after-03.jpg" alt="Caso Clínico 03"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <div class="reveal-item" data-reveal>
+                <h2>Pronto para transformar seu sorriso?</h2>
+                <p>Agende sua consulta e experimente o luxo da odontologia digital.</p>
+                <a href="https://wa.me/24999960640" class="btn-cta">Agendar pelo WhatsApp</a>
             </div>
         </div>
     </section>
