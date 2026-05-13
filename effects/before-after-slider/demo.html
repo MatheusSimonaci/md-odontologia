@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo: Before/After Slider</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --warm-white: #FAFAF8;
+      --deep-charcoal: #1A1A2E;
+      --soft-gray: #F4F4F2;
+      --teal: #0096A0;
+      --sage: #5BA08A;
+      --muted-stone: #7A7A72;
+      --divider: #E4E4E0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--deep-charcoal); padding: 48px 24px; }
+
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--muted-stone); margin-bottom: 40px; }
+    .meta strong { color: var(--teal); }
+
+    .demo-wrapper { max-width: 680px; margin: 0 auto; }
+    .demo-label { font-size: 13px; font-weight: 600; color: var(--muted-stone); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+    .demo-hint { text-align: center; margin-top: 16px; font-size: 14px; color: var(--muted-stone); }
+
+    /* ── Snippet CSS ── */
+    .ba-slider {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      user-select: none;
+      touch-action: none;
+      cursor: col-resize;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .ba-after { position: relative; width: 100%; display: block; }
+    .ba-after img { display: block; width: 100%; height: auto; pointer-events: none; }
+    .ba-before {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      clip-path: inset(0 50% 0 0);
+    }
+    .ba-before img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .ba-label {
+      position: absolute;
+      top: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      pointer-events: none;
+    }
+    .ba-before .ba-label { left: 12px; background: rgba(0,150,160,0.9); color: #fff; }
+    .ba-after .ba-label { right: 12px; background: rgba(91,160,138,0.9); color: #fff; }
+    .ba-handle {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .ba-handle-line { width: 2px; flex: 1; background: rgba(255,255,255,0.9); }
+    .ba-handle-btn {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      flex-shrink: 0;
+      color: #0096A0;
+    }
+    .ba-handle-btn svg { width: 20px; height: 20px; }
+
+    /* Placeholder de imagem (para demo sem fotos reais) */
+    .img-placeholder {
+      width: 100%;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .img-placeholder svg { width: 48px; height: 48px; opacity: 0.5; }
+    .placeholder-before { background: linear-gradient(135deg, #c8d6c8 0%, #9db89d 100%); color: rgba(0,0,0,0.5); }
+    .placeholder-after { background: linear-gradient(135deg, #e8f4f0 0%, #b8ddd4 100%); color: rgba(0,0,0,0.5); }
+
+    .note-box { margin-top: 32px; background: var(--soft-gray); border: 1px solid var(--divider); border-left: 4px solid var(--teal); border-radius: 12px; padding: 20px; font-size: 14px; color: var(--muted-stone); line-height: 1.6; }
+    .note-box strong { color: var(--deep-charcoal); }
+  </style>
+</head>
+<body>
+  <h1>Before/After Image Slider</h1>
+  <p class="meta">Impacto <strong>★★★★★</strong> · drag (mouse + touch) · prefers-reduced-motion ✓<br>
+  Arraste o divisor para revelar o resultado.</p>
+
+  <div class="demo-wrapper">
+    <p class="demo-label">Demonstração — Clareamento Dental</p>
+
+    <div class="ba-slider">
+      <!-- Imagem "antes" — sobreposta -->
+      <div class="ba-before">
+        <div class="img-placeholder placeholder-before">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          <span>Foto Antes</span>
+          <small>(substituir por imagem real)</small>
+        </div>
+        <span class="ba-label">Antes</span>
+      </div>
+
+      <!-- Imagem "depois" — base -->
+      <div class="ba-after">
+        <div class="img-placeholder placeholder-after">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          <span>Foto Depois</span>
+          <small>(substituir por imagem real)</small>
+        </div>
+        <span class="ba-label">Depois</span>
+      </div>
+
+      <!-- Handle -->
+      <div class="ba-handle">
+        <div class="ba-handle-line"></div>
+        <div class="ba-handle-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L4 12l4.59-4.59L10 8.83 6.83 12 10 15.17zm6.82 0L20 12l-4.59-4.59L14 8.83 17.17 12 14 15.17z"/></svg>
+        </div>
+        <div class="ba-handle-line"></div>
+      </div>
+    </div>
+
+    <p class="demo-hint">← Arraste para comparar →</p>
+
+    <div class="note-box">
+      <strong>Nota de implementação:</strong> Substitua os elementos <code>.img-placeholder</code> por tags <code>&lt;img src="..."&gt;</code> com fotos reais de antes/depois da clínica. As imagens devem ter as mesmas dimensões. Este efeito fica disponível no V2, após o relatório Manus trazer as fotos reais.
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function initSlider(slider) {
+        const before = slider.querySelector('.ba-before');
+        const handle = slider.querySelector('.ba-handle');
+        let dragging = false;
+        function setPosition(pct) {
+          pct = Math.max(2, Math.min(98, pct));
+          before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+          handle.style.left = pct + '%';
+        }
+        function getPercent(clientX) {
+          const rect = slider.getBoundingClientRect();
+          return ((clientX - rect.left) / rect.width) * 100;
+        }
+        slider.addEventListener('mousedown', (e) => { dragging = true; setPosition(getPercent(e.clientX)); e.preventDefault(); });
+        window.addEventListener('mousemove', (e) => { if (dragging) setPosition(getPercent(e.clientX)); });
+        window.addEventListener('mouseup', () => { dragging = false; });
+        slider.addEventListener('touchstart', (e) => { dragging = true; setPosition(getPercent(e.touches[0].clientX)); }, { passive: true });
+        window.addEventListener('touchmove', (e) => { if (dragging) setPosition(getPercent(e.touches[0].clientX)); }, { passive: true });
+        window.addEventListener('touchend', () => { dragging = false; });
+        setPosition(50);
+      }
+      document.querySelectorAll('.ba-slider').forEach(initSlider);
+    })();
+  </script>
+
+</body>
+</html>

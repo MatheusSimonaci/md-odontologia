@@ -1,0 +1,39 @@
+/* ============================================================
+   Nav Blur on Scroll Effect
+   Arquivo: effects/nav-blur-scroll/snippet.css
+   Impacto: ★★★☆☆ | Onde usar: Navigation bar sticky
+   ============================================================
+
+   USO:
+   1. Copie este CSS para o projeto
+   2. Adicione o snippet.js (ou o bloco <script> do demo.html)
+   3. A classe .nav-scrolled é adicionada automaticamente ao <nav> pelo JS
+
+   VARIÁVEIS USADAS: --warm-white, --divider
+   ============================================================ */
+
+/* Estado padrão — nav sem scroll */
+nav {
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+/* Estado com scroll — glassmorphism */
+nav.nav-scrolled {
+  background-color: rgba(250, 250, 248, 0.82);
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* ── Script de ativação (incluir no HTML) ── */
+/*
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 24);
+    }, { passive: true });
+  </script>
+*/

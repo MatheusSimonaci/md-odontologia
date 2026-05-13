@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(python scripts/instagram-downloader.py \"https://www.instagram.com/p/DVwAVk9jt7I/\" antes-x-depois)",
+      "Bash(python -m http.server 8000 --bind 127.0.0.1)",
+      "WebFetch(domain:localhost)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

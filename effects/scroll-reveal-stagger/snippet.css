@@ -1,0 +1,30 @@
+/* ============================================================
+   Scroll Reveal Stagger Effect
+   Arquivo: effects/scroll-reveal-stagger/snippet.css
+   Impacto: ★★★★☆ | Onde usar: Grids de cards, listas
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Estado inicial dos itens (invisível, levemente abaixo) */
+  .reveal-item {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Estado revelado */
+  .reveal-item.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Com reduced-motion: sem animação, sempre visível */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+  }
+}
