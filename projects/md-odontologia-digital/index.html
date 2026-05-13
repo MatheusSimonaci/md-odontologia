@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Odontologia Digital — Angra dos Reis</title>
+    <meta name="description" content="Especialistas em Odontologia Digital em Angra dos Reis. Implantes, Próteses, Estética e mais.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- SEO / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "MD Odontologia Digital",
+      "image": "https://mdodontologiadigital.com.br/assets/equipe.jpg",
+      "@id": "https://mdodontologiadigital.com.br",
+      "url": "https://mdodontologiadigital.com.br",
+      "telephone": "+5524999960640",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Cel. Carvalho, 539 - Sala 507",
+        "addressLocality": "Angra dos Reis",
+        "addressRegion": "RJ",
+        "postalCode": "23900-315",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.0079158,
+        "longitude": -44.3203566
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/mdodontologiadigital/"
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --warm-cream: #F5F0E8;
+            --deep-espresso: #2C1E12;
+            --warm-sand: #EDE8DF;
+            --warm-stone: #8A7568;
+            --clinical-teal: #0096A0;
+            --warm-divider: #DDD6CA;
+            
+            --space-md: 24px;
+            --space-lg: 48px;
+            --space-xl: 96px;
+            --space-2xl: 120px;
+            
+            --max-width: 1200px;
+            --header-height: 80px;
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--deep-espresso);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--header-height);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        nav.nav-scrolled {
+            background-color: rgba(245, 240, 232, 0.85);
+            backdrop-filter: blur(12px) saturate(1.4);
+            -webkit-backdrop-filter: blur(12px) saturate(1.4);
+            box-shadow: 0 1px 0 rgba(44, 30, 18, 0.05);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            background: var(--warm-sand);
+            border: 1px solid var(--warm-divider);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        .nav-links { display: none; gap: var(--space-md); }
+        .nav-links a { font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nav-links a:hover { color: var(--clinical-teal); }
+        
+        .btn-cta {
+            background-color: var(--clinical-teal);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 150, 160, 0.2); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background: url('assets/equipe.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: var(--deep-espresso); /* Fallback */
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--deep-espresso) 0%, rgba(44, 30, 18, 0.7) 30%, transparent 100%);
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            box-shadow: inset 0 0 150px rgba(44, 30, 18, 0.5); /* Vinheta */
+            z-index: 2;
+            backdrop-filter: saturate(0.8) contrast(1.1) sepia(0.15); /* Editorial filter */
+            -webkit-backdrop-filter: saturate(0.8) contrast(1.1) sepia(0.15);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            max-width: 650px;
+        }
+        .hero h1 {
+            font-size: clamp(44px, 8vw, 72px);
+            line-height: 1.05;
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        /* Reveal Animation Classes */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal-item {
+                opacity: 0;
+                transform: translateY(28px);
+                transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .reveal-item.reveal-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Specialties Section */
+        .section { padding: var(--space-2xl) 0; }
+        .section-header { margin-bottom: var(--space-xl); text-align: center; }
+        .section-header h2 { font-size: 42px; margin-bottom: 12px; }
+        .section-header .subtitle { color: var(--warm-stone); text-transform: uppercase; font-size: 13px; letter-spacing: 0.15em; font-weight: 600; }
+
+        .grid-specialties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1px; /* Gap simulated by background for thin dividers */
+            background-color: var(--warm-divider);
+            border: 1px solid var(--warm-divider);
+        }
+        .specialty-card {
+            background-color: var(--warm-cream);
+            padding: var(--space-lg);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .specialty-card:hover { 
+            background-color: var(--warm-sand);
+            box-shadow: inset 0 0 0 1px var(--deep-espresso);
+            z-index: 5;
+        }
+        .specialty-card h3 { font-size: 22px; margin-bottom: 16px; color: var(--deep-espresso); }
+        .specialty-card p { font-size: 15px; color: var(--warm-stone); line-height: 1.7; }
+        
+        .specialty-card::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background-color: var(--warm-stone);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        /* Location & Space */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        @media (min-width: 1024px) {
+            .location-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .location-info h2 { font-size: 42px; margin-bottom: var(--space-lg); }
+        .info-item { margin-bottom: var(--space-lg); border-left: 2px solid var(--warm-divider); padding-left: var(--space-md); }
+        .info-label { font-weight: 600; text-transform: uppercase; font-size: 11px; color: var(--warm-stone); margin-bottom: 8px; letter-spacing: 0.1em; }
+        .info-content { font-size: 16px; color: var(--deep-espresso); }
+        
+        .gallery-space {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .gallery-item { border-radius: 2px; overflow: hidden; box-shadow: 0 4px 12px rgba(44, 30, 18, 0.08); }
+        .gallery-item img { transition: transform 0.6s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item:nth-child(1) { grid-column: span 2; }
+
+        /* Footer */
+        footer {
+            background-color: var(--warm-sand);
+            padding: var(--space-lg) 0;
+            border-top: 1px solid var(--warm-divider);
+            font-size: 14px;
+            color: var(--warm-stone);
+        }
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        @media (min-width: 768px) {
+            .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-end; }
+        }
+        .footer-brand .logo { margin-bottom: 12px; color: var(--deep-espresso); }
+        .footer-legal { text-align: right; }
+
+        /* Mobile Adjustments */
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+            .hero-content { padding-left: var(--space-md); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="container nav-inner">
+            <div class="logo">MD</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#localizacao">Onde Estamos</a></li>
+            </ul>
+            <a href="https://wa.me/24999960640" class="btn-cta">Agendar</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content reveal-item" data-reveal>
+                <p class="subtitle">Dr. Daniel Simonaci • Dr. Marcelo Oliveira • Dr. André Rodrigues</p>
+                <h1>O luxo do cuidado em cada detalhe.</h1>
+                <p>Especialistas em Odontologia Digital em Angra dos Reis. Tecnologia de ponta e acolhimento humano para transformar seu sorriso.</p>
+                <a href="https://wa.me/24999960640" class="btn-cta">Agendar Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="especialidades" class="section">
+        <div class="container">
+            <div class="section-header reveal-item" data-reveal>
+                <p class="subtitle">Excelência Técnica</p>
+                <h2>Nossas Especialidades</h2>
+            </div>
+            
+            <div class="grid-specialties" data-reveal>
+                <div class="specialty-card">
+                    <h3>Odontologia Digital</h3>
+                    <p>Planejamento computadorizado e escaneamento intraoral para resultados precisos e confortáveis.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Implantodontia</h3>
+                    <p>Reabilitação oral com implantes de alta performance para devolver função e segurança.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Prótese e Estética</h3>
+                    <p>Lentes de contato dental e coroas em porcelana com acabamento editorial natural.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Ortodontia</h3>
+                    <p>Alinhadores invisíveis e ortodontia moderna para um sorriso harmônico em qualquer idade.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Endodontia</h3>
+                    <p>Tratamentos de canal com tecnologia mecanizada, priorizando agilidade e ausência de dor.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Periodontia</h3>
+                    <p>Cuidados avançados com a saúde gengival e as estruturas de suporte do sorriso.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Cirurgia Bucomaxilofacial</h3>
+                    <p>Procedimentos cirúrgicos complexos realizados com máxima segurança e precisão digital.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Tecnologia Avançada</h3>
+                    <p>Laserterapia, Air Flow e diagnósticos por imagem para um tratamento minimamente invasivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="section" style="background-color: var(--warm-sand);">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info reveal-item" data-reveal>
+                    <p class="subtitle">Onde Ficamos</p>
+                    <h2>Venha nos visitar</h2>
+                    
+                    <div class="info-item">
+                        <p class="info-label">Endereço</p>
+                        <p>R. Cel. Carvalho, 539 — Sala 507<br>Centro, Angra dos Reis - RJ</p>
+                        <a href="https://www.google.com/maps/place/MD+Odontologia+Especializada/@-23.0079158,-44.3203566,17z/data=!3m1!4b1!4m6!3m5!1s0x9c4f64a57e8283:0xdf907feb85636cb6!8m2!3d-23.0079158!4d-44.3203566!16s%2Fg%2F11q8jpsqmd" target="_blank" style="color: var(--clinical-teal); font-size: 14px; font-weight: 600;">Abrir no Google Maps</a>
+                    </div>
+                    
+                    <div class="info-item">
+                        <p class="info-label">Horários</p>
+                        <p>Segunda a Sexta: 08:00 – 19:00</p>
+                    </div>
+
+                    <div class="info-item">
+                        <p class="info-label">Responsável Técnico</p>
+                        <p>Dr. Daniel Simonaci<br>CRO RJ 27198 | EPAO 5283</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-space" data-reveal>
+                    <div class="gallery-item"><img src="assets/frame-entrada-clinica-01.jpg" alt="Entrada da Clínica"></div>
+                    <div class="gallery-item"><img src="assets/frame-atendimento-01.jpg" alt="Sala de Atendimento"></div>
+                    <div class="gallery-item"><img src="assets/frame-entrada-clinica-04.jpg" alt="Recepção"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo">MD</div>
+                <p>© 2026 MD Odontologia Digital</p>
+            </div>
+            <div class="footer-legal">
+                <p>Angra dos Reis, Rio de Janeiro</p>
+                <p>Cuidado de alto padrão para o seu sorriso.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Nav Blur on Scroll
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 24);
+        }, { passive: true });
+
+        // Scroll Reveal Stagger
+        (function () {
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const DEFAULT_DELAY = 100;
+            const DEFAULT_THRESHOLD = 0.15;
+
+            function setup() {
+                const containers = document.querySelectorAll('[data-reveal]');
+
+                containers.forEach((container) => {
+                    const delay = parseInt(container.dataset.revealDelay, 10) || DEFAULT_DELAY;
+                    const threshold = parseFloat(container.dataset.revealThreshold) || DEFAULT_THRESHOLD;
+                    const children = container.children;
+                    const isGrid = children.length > 1 && container.classList.contains('grid-specialties') || container.classList.contains('gallery-space');
+
+                    if (prefersReduced) {
+                        container.classList.add('reveal-visible');
+                        Array.from(children).forEach((c) => c.classList.add('reveal-visible'));
+                        return;
+                    }
+
+                    if (isGrid) {
+                        Array.from(children).forEach((child, i) => {
+                            child.classList.add('reveal-item');
+                            child.style.transitionDelay = `${i * delay}ms`;
+                        });
+                    } else {
+                        container.classList.add('reveal-item');
+                    }
+
+                    const observer = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                    if (isGrid) {
+                                        Array.from(children).forEach((c) => c.classList.add('reveal-visible'));
+                                    } else {
+                                        container.classList.add('reveal-visible');
+                                    }
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        },
+                        { threshold }
+                    );
+
+                    observer.observe(container);
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', setup);
+            } else {
+                setup();
+            }
+        })();
+    </script>
+</body>
+</html>
