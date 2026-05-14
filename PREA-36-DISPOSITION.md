@@ -17,6 +17,7 @@ The site for **MD Odontologia Digital** has been refined with several small UX a
 - **Text Standardization**: Location-related labels were standardized to "Onde Estamos" across the navigation, buttons, and section subtitles for brand consistency.
 
 ### 2. Visual & Interaction Refinements
+- **Hero Image Alignment**: Added `object-position: top` to the hero video/poster image. This ensures the team members' heads are not cropped on desktop views while maintaining the "cover" effect.
 - **Staggered Animations Fix**: The reveal script was updated to support staggered child animations for the **Testimonials** and **Clinical Cases** grids, matching the high-end feel of the Specialties section.
 - **Gallery Balance**: Added a third establishment image (`frame-entrada-clinica-02.jpg`) to the location gallery to ensure a balanced 3-column layout on desktop.
 - **Grid Consistency**: Imposed a fixed `aspect-ratio: 4/3` and `object-fit: cover` on clinical case images to prevent jagged grid layouts caused by varying original image dimensions.
