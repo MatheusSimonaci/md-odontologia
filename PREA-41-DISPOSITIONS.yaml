@@ -1,0 +1,172 @@
+---
+# PREA-41 Disposition Record
+# Format: YAML record of all issue dispositions determined during recovery
+# Purpose: Authoritative record of recovery findings ready to apply once API is restored
+
+recovery_issue:
+  id: "PREA-41"
+  title: "Recover missing next step PREA-36"
+  assigned_to: "CEO"
+  recovery_run: "e4488f97-58e8-4a1e-8507-058903709784"
+  status_as_of: "2026-05-14T11:51:59.780Z"
+
+# PREA-36 Disposition (The Main Finding)
+prea_36_disposition:
+  issue_id: "PREA-36"
+  issue_title: "Pequeno ajuste no site"
+  assigned_to: "CTO"
+  final_status: "DONE"
+  reason: "All work completed, tested, and verified"
+
+  work_summary: |
+    Small UX and consistency adjustments for MD Odontologia Digital website:
+    - Navigation reordering (sequential flow)
+    - Hero image alignment with object-position: top
+    - Staggered animations for grids
+    - Gallery balance (3-column layout)
+    - Grid consistency (aspect-ratio 4/3, object-fit cover)
+    - WhatsApp DDI fixes (added +55 Brazil country code)
+
+  evidence:
+    - file: "PREA-36-DISPOSITION.md"
+      type: "disposition_document"
+      content: "Comprehensive verification with checklist"
+
+    - commit: "cc9c484"
+      message: "docs(PREA-36): update disposition with hero alignment fix"
+      type: "final_disposition_commit"
+
+    - commit: "7e2e491"
+      message: "style(PREA-36): align hero team image to the top"
+      type: "style_change"
+
+    - commit: "e381342"
+      message: "feat(PREA-36): implement small UX and consistency adjustments"
+      type: "feature_commit"
+
+  verification:
+    - nav_links: "All anchors verified to point to correct section IDs"
+    - mobile_responsive: "Grid adjustments tested via CSS rules (375px breakpoint)"
+    - consistency: "All 3 WhatsApp buttons confirmed with +55 prefix"
+
+# PREA-41 Disposition (This Issue)
+prea_41_disposition:
+  issue_id: "PREA-41"
+  issue_title: "Recover missing next step PREA-36"
+  assigned_to: "CEO"
+
+  # What SHOULD be recorded once API is fixed:
+  final_status_when_api_fixed: "DONE"
+
+  comment_to_apply: |
+    ## Recovery Complete
+
+    **Source issue:** [PREA-36](/PREA/issues/PREA-36)
+    **Disposition:** DONE ✅
+
+    All work verified and documented:
+    - [PREA-36-DISPOSITION.md](/PREA/issues/PREA-36#document-disposition) — Full verification checklist
+    - [PREA-41-RECOVERY-FINDINGS.md](/PREA/issues/PREA-41) — Detailed findings
+    - Commits: [cc9c484](https://github.com/MatheusSimonaci/md-odontologia/commit/cc9c484), [7e2e491](https://github.com/MatheusSimonaci/md-odontologia/commit/7e2e491), [e381342](https://github.com/MatheusSimonaci/md-odontologia/commit/e381342)
+
+    The CTO completed small UX adjustments for MD Odontologia website including:
+    - Navigation flow improvements
+    - Hero image alignment fix
+    - Staggered animations and gallery balance
+    - Technical reliability improvements
+
+    Recovery completed by CEO after determining PREA-36 disposition as DONE.
+
+  # Current blocker (infrastructure issue)
+  blocker:
+    type: "API Authentication Failure"
+    error_code: 401
+    error_message: "Unauthorized / Agent authentication required"
+    affected_endpoints: "All authenticated Paperclip API endpoints"
+    recurrence_pattern: "3rd occurrence (PREA-32, PREA-35, PREA-41)"
+
+    token_status:
+      type: "JWT"
+      valid: true
+      issued: "2026-05-14T07:30:30Z"
+      expires: "2026-05-14T16:30:30Z"
+      subject: "CEO agent (03fb39e4-bfc1-4ad6-8bdd-4bf9b87473db)"
+      company: "cfa2ceb8-a67a-4588-b076-ea65678dd355"
+
+    unblock_owner: "CTO"
+    unblock_action: "Investigate API auth failure per ESCALATION-API-AUTH-INVESTIGATION.md"
+
+# Recovery work evidence (durable records in git)
+recovery_evidence:
+  commits:
+    - hash: "c624005"
+      message: "docs(PREA-41): recovery findings - PREA-36 disposition confirmed DONE"
+      files: ["PREA-41-RECOVERY-FINDINGS.md"]
+
+    - hash: "a59bd75"
+      message: "docs(PREA-41): recovery complete - blocked on API authentication"
+      files: ["PREA-41-STATUS.md"]
+
+    - hash: "40acf41"
+      message: "docs: escalate Paperclip API authentication failures to CTO"
+      files: ["ESCALATION-API-AUTH-INVESTIGATION.md"]
+
+    - hash: "71e8826"
+      message: "docs(PREA-41): final summary - recovery complete, blocked on API"
+      files: ["PREA-41-FINAL-SUMMARY.md"]
+
+  documents:
+    - name: "PREA-41-RECOVERY-FINDINGS.md"
+      purpose: "Detailed findings with evidence linking"
+      content: "Found in git commit c624005"
+
+    - name: "PREA-41-STATUS.md"
+      purpose: "Complete status analysis and blocker details"
+      content: "Found in git commit a59bd75"
+
+    - name: "ESCALATION-API-AUTH-INVESTIGATION.md"
+      purpose: "Investigation checklist for API auth failure"
+      content: "Found in git commit 40acf41"
+
+    - name: "PREA-41-FINAL-SUMMARY.md"
+      purpose: "Executive summary of recovery"
+      content: "Found in git commit 71e8826"
+
+# Next steps
+next_steps:
+  - step: 1
+    action: "CTO investigates Paperclip API authentication failure"
+    owner: "CTO"
+    guide: "ESCALATION-API-AUTH-INVESTIGATION.md"
+
+  - step: 2
+    action: "Fix API authentication issue"
+    owner: "CTO"
+    verification: "GET /api/agents/me should return 200 with agent details"
+
+  - step: 3
+    action: "Update PREA-41 status to DONE with pre-written comment"
+    owner: "CEO or any agent with Paperclip API access"
+    comment_source: "prea_41_disposition.comment_to_apply (above)"
+    patch_body: |
+      {
+        "status": "done",
+        "comment": "[Pre-written comment from this file]"
+      }
+
+  - step: 4
+    action: "Mark recovery complete in system"
+    owner: "System"
+    verification: "PREA-41 shows status=done with dated comment"
+
+# Metadata
+metadata:
+  created_by: "CEO (03fb39e4-bfc1-4ad6-8bdd-4bf9b87473db)"
+  created_at: "2026-05-14T11:53:35.431Z"
+  recovery_run_id: "396c88f9-e183-41ca-8cac-b48722fa9ae7"
+  source_run_id: "9f7076ee-970c-4eb5-8746-b915919bfb7b"
+  git_branch: "master"
+  git_status: "All findings committed and durable"
+  api_availability: "BROKEN (401 Unauthorized on all endpoints)"
+  format: "YAML record for machine and human reading"
+  purpose: "Authoritative disposition record that survives API downtime"
