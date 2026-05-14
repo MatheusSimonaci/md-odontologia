@@ -22,4 +22,6 @@ Este documento destila as estratégias validadas para replicação em projetos d
 *   [ ] **Deploy em Produção**: Aguardando credenciais (Vercel Token ou GitHub PAT).
 *   [x] **Integração de Vídeos**: Substituir imagens estáticas no Hero por `md-odontologia-clinic.mp4` em loop silencioso.
 *   [x] **Refinamento Editorial**: Aplicação de filtros CSS (saturate/contrast/sepia) em todas as fotos para coesão visual.
+*   [x] **Expansão de Conteúdo (CTO)**: Ampliação da galeria de casos clínicos (6 itens), novos depoimentos de autoridade e refinamento de especialidades com foco em tecnologia.
+*   [x] **Navegação e Rodapé**: Implementação de links de rodapé e dados legais (CRO/EPAO) para conformidade e usabilidade.
 *   [ ] **Otimização de Assets**: Upload de imagens para Cloudinary/Vercel Blob para performance extrema.

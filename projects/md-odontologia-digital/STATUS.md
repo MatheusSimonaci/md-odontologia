@@ -1,6 +1,6 @@
 # Status do Projeto
 
-- **Fase Atual**: Concluído (Pronto para deploy).
+- **Fase Atual**: Concluído (Deploy realizado e verificado).
 - **Implementações Recentes**:
   - Hero Video Loop (Concluído).
   - Widget de Mapa Interativo (Concluído).
@@ -9,6 +9,11 @@
   - Botão de localização no Header e Hero (Concluído).
   - Revisão de CTO e Alinhamento de Documentação (Concluído).
   - Otimização de SEO (OG Tags) e Performance (Lazy Loading) (Concluído).
-- **Blocos Identificados**:
-  - Nenhum. O projeto está tecnicamente completo e revisado.
-- **Próximas Ações**: Realizar o deploy em produção pelo CEO.
+  - Expansão da Galeria de Casos e Refinamento de Especialidades (Concluído).
+  - Adição de novos depoimentos de alta autoridade (Concluído).
+  - Refinamento do Footer com links e dados legais (Concluído).
+  - Deploy em Produção via Vercel (Concluído).
+- **Status do Deploy**:
+  - URL: https://md-odontologia.vercel.app/
+  - Sincronização GitHub: ✅ OK
+- **Próximas Ações**: Monitorar feedback do usuário final.
