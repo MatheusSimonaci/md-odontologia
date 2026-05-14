@@ -13,6 +13,7 @@
   - Adição de novos depoimentos de alta autoridade (Concluído).
   - Refinamento do Footer com links e dados legais (Concluído).
   - Deploy em Produção via Vercel (Concluído).
+  - Correção de Visibilidade e Centramento no PC (PREA-42) (Concluído).
 - **Status do Deploy**:
   - URL: https://md-odontologia.vercel.app/
   - Sincronização GitHub: ✅ OK
